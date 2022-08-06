@@ -4,7 +4,7 @@
   "description": "A repo to meet the requirements of Bootcamp assessment CP02 - NPM",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/chelsea-liddy/chelsea-CP02/issues"
   },
-  "homepage": "https://github.com/chelsea-liddy/chelsea-CP02#readme"
+  "homepage": "https://github.com/chelsea-liddy/chelsea-CP02#readme",
+  "dependencies": {
+    "jest": "^28.1.3"
+  }
 }
