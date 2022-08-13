@@ -1,23 +1,55 @@
 {
-  "name": "chelsea-cp02",
+  "name": "good-news-library",
   "version": "1.0.0",
-  "description": "A repo to meet the requirements of Bootcamp assessment CP02 - NPM",
+  "description": "personal project to practise fs and server-side rendering",
+  "author": "Chelsea Liddy",
+  "license": "ISC",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
+    "dev": "nodemon index --ignore data.json",
+    "lint": "eslint .",
     "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chelsea-liddy/chelsea-CP02.git"
+    "url": "git+https://github.com/chelsea-liddy/Good-News-Library.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "homepage": "https://github.com/chelsea-liddy/Good-News-Library/blob/main/README.md",
+ 
   "bugs": {
-    "url": "https://github.com/chelsea-liddy/chelsea-CP02/issues"
+    "url": "https://github.com/chelsea-liddy/Good-News-Library/issues"
   },
-  "homepage": "https://github.com/chelsea-liddy/chelsea-CP02#readme",
+  "jest": {
+    "watchPathIgnorePatterns": [
+      "data.json"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "eda"
+  },
   "dependencies": {
-    "jest": "^28.1.3"
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-config-eda": "^1.2.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^26.1.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "prettier": "2.6.1",
+    "supertest": "^6.2.2"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   }
 }
+  
+
