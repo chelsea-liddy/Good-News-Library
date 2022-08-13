@@ -25,6 +25,9 @@
       "data.json"
     ]
   },
+  "engines": {
+    "node": "16.x"
+  },
   "eslintConfig": {
     "extends": "eda"
   },
