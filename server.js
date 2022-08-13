@@ -21,7 +21,9 @@ function readData(callback) {
 }
 
 server.get('/', (req, res) => {
-  res.render('home')
+  readData((viewData) => {
+    res.render('home', viewData)
+  })
 })
 
 module.exports = server
