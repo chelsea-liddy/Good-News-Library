@@ -1,2 +1,2 @@
-# chelsea-CP02
-A repo to meet the requirements of Bootcamp assessment CP02 - NPM
+# Welcome to the Good News Library
+Personal project
