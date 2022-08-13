@@ -47,7 +47,9 @@
     "jest": "^27.5.1",
     "nodemon": "^2.0.15",
     "prettier": "2.6.1",
-    "supertest": "^6.2.2"
+    "supertest": "^6.2.2",
+    "@testing-library/dom": "^8.11.3",
+    "@testing-library/jest-dom": "^5.14.1"
   },
   "prettier": {
     "semi": false,
