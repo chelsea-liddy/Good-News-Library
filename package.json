@@ -21,9 +21,7 @@
     "url": "https://github.com/chelsea-liddy/Good-News-Library/issues"
   },
   "jest": {
-    "watchPathIgnorePatterns": [
-      "data.json"
-    ]
+    "testEnvironment": "jsdom"
   },
   "engines": {
     "node": "16.x"
@@ -36,6 +34,8 @@
     "express-handlebars": "^6.0.2"
   },
   "devDependencies": {
+    "@testing-library/dom": "^8.11.3",
+    "@testing-library/jest-dom": "^5.14.1",
     "eslint": "^8.10.0",
     "eslint-config-eda": "^1.2.0",
     "eslint-plugin-import": "^2.25.4",
@@ -47,9 +47,8 @@
     "jest": "^27.5.1",
     "nodemon": "^2.0.15",
     "prettier": "2.6.1",
-    "supertest": "^6.2.2",
-    "@testing-library/dom": "^8.11.3",
-    "@testing-library/jest-dom": "^5.14.1"
+    "supertest": "^6.2.2"
+    
   },
   "prettier": {
     "semi": false,
