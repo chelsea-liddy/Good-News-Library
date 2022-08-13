@@ -1,5 +1,7 @@
-module.exports = { sayHello }
+const server = require('./server')
 
-function sayHello(name) {
-  return 'Hello ' + name + '!'
-}
+const port = process.env.PORT || 3000
+
+server.listen(port, function () {
+  console.log('Server is listening on port', port)
+})
