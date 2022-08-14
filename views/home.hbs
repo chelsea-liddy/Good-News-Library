@@ -1,16 +1,21 @@
 <div>
-  <h1 role= "heading">Welcome to The Good News Library!</h1>
+  <h1 role= "heading">Welcome to The Good News Community Library!</h1>
 </div>
 
 <div class ="container">
   {{#each stories}}
   <div class="story-list">
     <img src="{{homeImage}}">
-    <h2>{{title}}</h2>
+    <h2 role = "heading">{{title}}</h2>
     <p>
       {{description}}
     </p>
     <a href="/{{id}}"><button>Check out</button></a>
   </div>
   {{/each}}
+</div>
+
+<div>
+  <h2>Do you have a story you would like to contribute to the library?</h2>
+  <button>Contribute</button>
 </div>
