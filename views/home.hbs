@@ -5,9 +5,12 @@
 <div class ="container">
   {{#each stories}}
   <div class="story-list">
-  <img src="{{homeImage}}">
-  <a href="/{{id}}"><h2>{{title}}</h2></a>
-  <p>{{description}}</p>
+    <img src="{{homeImage}}">
+    <h2>{{title}}</h2>
+    <p>
+      {{description}}
+    </p>
+    <a href="/{{id}}"><button>Check out</button></a>
   </div>
   {{/each}}
 </div>
