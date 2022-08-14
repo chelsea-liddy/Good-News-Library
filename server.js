@@ -37,15 +37,21 @@ server.get('/', (req, res) => {
   })
 })
 
+server.get('/contribute', (req, res) => {
+  const fields = {
+    title: '',
+    description: '',
+    summary: '',
+    externalURL: '',
+  }
+  res.render('contribute', fields)
+})
+
 server.get('/:id', (req, res) => {
   readData((viewData) => {
     let story = viewData.stories.find((story) => story.id == req.params.id)
     res.render('story', story)
   })
-})
-
-server.get('/contribute', (req, res) => {
-  //TO DO
 })
 
 server.post('/newStory', (req, res) => {
