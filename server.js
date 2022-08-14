@@ -20,9 +20,49 @@ function readData(callback) {
   })
 }
 
+function writeData(viewData) {
+  const story = JSON.stringify(viewData, null, 2)
+  fs.writeFile('./data.json', story, (err) => {
+    if (err) {
+      console.log('Whoops, couldn`t write that!')
+    } else {
+      console.log('Thanks for the story!')
+    }
+  })
+}
+
 server.get('/', (req, res) => {
   readData((viewData) => {
     res.render('home', viewData)
+  })
+})
+
+server.get('/:id', (req, res) => {
+  readData((viewData) => {
+    let story = viewData.stories.find((story) => story.id == req.params.id)
+    res.render('story', story)
+  })
+})
+
+server.get('/contribute', (req, res) => {
+  //TO DO
+})
+
+server.post('/newStory', (req, res) => {
+  readData((viewData) => {
+    const newId = viewData.stories.length + 1
+    const newStory = {
+      id: newId,
+      title: req.body.title,
+      homeImage: '/images/puppy1.jpg',
+      description: req.body.description,
+      summary: req.body.summary,
+      summaryImage: '/images/puppy1.jpg',
+      externalURL: req.body.externalURL,
+    }
+    viewData.stories.push(newStory)
+    writeData(viewData)
+    res.render('story', newStory)
   })
 })
 
