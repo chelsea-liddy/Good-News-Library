@@ -15,3 +15,27 @@ describe('GET /', () => {
       })
   })
 })
+
+describe('GET /:id', () => {
+  test('show individual story based on id', () => {
+    return request(server)
+      .get('/0')
+      .then((res) => {
+        document.body.innerHTML = res.text
+        const storyTitle = screen.getAllByRole('heading')
+        expect(storyTitle[[1]]).toHaveTextContent('You have checked out')
+      })
+  })
+})
+
+describe('POST /contribute', () => {
+  test('show contribution form', () => {
+    return request(server)
+      .get('/contribute')
+      .then((res) => {
+        document.body.innerHTML = res.text
+        const form = screen.getAllByRole('form')
+        expect(form).toBeInTheDocument()
+      })
+  })
+})
