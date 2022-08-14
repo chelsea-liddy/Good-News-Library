@@ -1,7 +1,7 @@
 {
   "stories": [
     {
-      "id": 0,
+      "id": 1,
       "title": "Chelsea got this page working!", 
       "homeImage": "/images/puppy1.jpg",
       "description": "Getting to this point is a good news story at this stage.",
@@ -10,7 +10,7 @@
       "externalURL": "A link to the source for the story"
     },
     {
-      "id": 1,
+      "id": 2,
       "title": "A different story!", 
       "homeImage": "/images/puppy1.jpg",
       "description": "Here's a different story to prove this works!",
