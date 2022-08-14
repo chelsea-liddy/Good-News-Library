@@ -28,7 +28,7 @@ describe('GET /:id', () => {
   })
 })
 
-describe('POST /contribute', () => {
+describe('GET /contribute', () => {
   test('show contribution form', () => {
     return request(server)
       .get('/contribute')
@@ -36,6 +36,17 @@ describe('POST /contribute', () => {
         document.body.innerHTML = res.text
         const form = screen.getAllByRole('form')
         expect(form).toBeInTheDocument()
+      })
+  })
+})
+
+describe('POST /newStory', () => {
+  test('show story that was added', () => {
+    return request(server)
+      .get('/newStory')
+      .then((res) => {
+        document.body.innerHTML = res.text
+        //TO DO
       })
   })
 })
